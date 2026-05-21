@@ -1,0 +1,111 @@
+.navbar-toggler:focus,
+.navbar-toggler:active{
+    outline-style: none;
+    box-shadow: none;
+}
+nav {
+   min-height: 50px; 
+   padding:15px;
+}
+ul li a {
+   color:BLACK !important;
+}
+ul li a:hover {
+   background-color:#a5d6bb !important;
+}
+.nav-link {
+   padding:14px;
+}
+.navbar-nav li ul.dropdown-menu {
+    display: none;
+}
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu>.dropdown-menu{
+    top: 0%;
+    left:100%;
+    margin-top: -10px;
+}
+.dropdown-menu>li>a:hover:after {
+    transform: rotate(-90deg);
+    transition: 1s;
+}
+.flex-container img{
+  width:350px; height: 150px;
+  padding-bottom: 5px;
+}
+
+@media (max-width:600px){
+   
+    ul li a:hover {
+      background-color: #faf4d6 !important;
+    }
+    ul li a.dropdown-item:hover{
+      background-color: #faf4d6 !important;
+    }
+    .dropdown-menu{
+        border: none;
+        padding-top: 0px;
+        max-width: 100px;
+		background-color: transparent;
+    }
+    .dropdown-item{
+        width: 100px;
+    }
+    .dropdown-submenu>.dropdown-menu{
+        top: 0%;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+    .dropdown-menu>li>a:hover:after {
+        transform: rotate(0deg);
+    }
+}
+
+p a, h6 a {text-decoration: none}
+div .card {
+    width:400px; margin:5px auto;
+}
+
+.display-6 {
+    background-color: rgb(6, 63, 17);
+    font-family: 'Noto Sans TC', sans-serif; font-size: 30px;
+}
+.caption-style{
+    text-align: center; font-size: 24px;
+    padding: 2px;
+    color: white; background-color: #008000;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+/* ====== 各系列產品展示 css ===== */
+.product-img {
+    height:300px;
+    object-fit:cover;
+}
+
+/* 滑鼠移上去時, 圖片放大 */
+.product-img{
+    transition: transform 0.3s ease;
+}
+.card:hover .product-img{
+    transform: scale(1.1);
+}
+
+/* 購物車按鈕 預設隱藏 */
+.card .add-cart{
+    opacity:0;
+    transform:translateY(10px);
+    transition:0.3s;
+}
+/* 滑鼠移到卡片時, 顯示 購物車按鈕*/
+.card:hover .add-cart {
+    opacity:1;
+    transform:translateY(0);
+}
